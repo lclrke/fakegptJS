@@ -31,12 +31,28 @@ function pickUniqueResponse() {
 }
 
 function addMessage(content, isUser = false) {
-  const msg = document.createElement('div');
-  msg.classList.add('message');
-  msg.innerHTML = isUser
-    ? `<span style="color: #666;">You asked: ${content}</span><br>${pickUniqueResponse()}`
-    : content;
-  messageList.appendChild(msg);
+  const block = document.createElement('div');
+  block.classList.add('message-block');
+
+  if (isUser) {
+    const userBubble = document.createElement('div');
+    userBubble.classList.add('message-user');
+    userBubble.innerText = content;
+
+    const reply = document.createElement('div');
+    reply.classList.add('message-bot');
+    reply.innerText = pickUniqueResponse();
+
+    block.appendChild(userBubble);
+    block.appendChild(reply);
+  } else {
+    const bot = document.createElement('div');
+    bot.classList.add('message-bot');
+    bot.innerText = content;
+    block.appendChild(bot);
+  }
+
+  messageList.appendChild(block);
   messageList.scrollTop = messageList.scrollHeight;
 }
 
@@ -47,7 +63,7 @@ function handleSend() {
   messageCount++;
 
   if (messageCount > 5) {
-    addMessage(`<span style="color: red;">Sorry, you have reached your credit limit! Subscribe to Wavo Plus if you are seeing this message too often</span>`);
+    addMessage("Sorry, you have reached your credit limit! Subscribe to Wavo Plus if you are seeing this message too often.");
     input.value = '';
     return;
   }
