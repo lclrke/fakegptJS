@@ -60,22 +60,32 @@ main.cs-main-container {
   color: #666;
 }
 
-/* Buttons */
+/* Prompt Buttons */
 .button-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  gap: 12px;
   padding: 15px 0;
 }
 
 .button-container .box {
-  font-size: 12px;
-  padding: 10px;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.25px;
+  padding: 10px 12px;
   background: #fff;
-  border: 1px solid #ccc;
-  border-radius: 10px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
   text-align: center;
   cursor: pointer;
+  line-height: 1.35;
+  color: #222;
+  max-width: 140px;
+  min-height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 /* Message area */
