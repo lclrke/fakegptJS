@@ -1,6 +1,6 @@
 const messageList = document.querySelector('.cs-message-list');
 const input = document.querySelector('#user-input');
-const sendButton = document.querySelector('#send-btn');
+const sendButton = document.querySelector('#send-button');
 const buttons = document.querySelectorAll('.box');
 
 let responses = [
