@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Audience Dashboard Assistant</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main class="cs-main-container">
+      <div class="cs-chat-container">
+        <!-- Header -->
+        <div class="chat-header">
+          <div class="avatar">
+            <div class="cs-avatar cs-avatar--md">
+              <img src="assets/wavologo.png" alt="WavoGPT" />
+            </div>
+          </div>
+          <div class="cs-conversation-header__actions">
+            <span class="chat-title">Audience Dashboard Assistant</span>
+            <span class="chat-subtitle">Your Data Assistant</span>
+          </div>
+        </div>
+
+        <!-- Button Set -->
+        <div class="button-container">
+          <button class="box">Where are my Super Fans?</button>
+          <button class="box">Show me my best and worst social posts.</button>
+          <button class="box">Help me reach more people with my organic content.</button>
+          <button class="box">How can you help me promote my artist roster?</button>
+        </div>
+
+        <!-- Chat Log -->
+        <div class="cs-message-list" id="message-area">
+          <div class="placeholder">Hello, I'm your data assistant! Need help understanding your artist's data in the dashboard? Ask away!</div>
+        </div>
+
+        <!-- Input Bar -->
+        <div class="cs-message-input">
+          <input type="text" id="user-input" placeholder="Type message here" />
+          <button id="send-button">
+            <img src="assets/send.svg" alt="Send" />
+          </button>
+        </div>
+
+        <!-- Legal Note -->
+        <div class="legal">Audience Dashboard Assistant can make mistakes. (BETA)</div>
+      </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="script.js" defer></script>
+  </body>
+</html>
