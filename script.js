@@ -48,6 +48,7 @@ function handleSend() {
 
   if (messageCount > 5) {
     addMessage(`<span style="color: red;">Sorry, you have reached your credit limit! Subscribe to Wavo Plus if you are seeing this message too often</span>`);
+    input.value = '';
     return;
   }
 
@@ -67,9 +68,11 @@ buttons.forEach(btn => {
   btn.addEventListener('click', () => {
     input.value = btn.innerText.trim();
     handleSend();
+    // Hide all buttons after click
     buttons.forEach(b => b.style.display = 'none');
   });
 });
 
-// Initial greeting
-messageList.innerHTML = `<div class="placeholder">Hello, I'm your data assistant! Need help understanding your artist's data in the dashboard? Ask away!</div>`;
+// Replace placeholder with greeting
+messageList.innerHTML = '';
+addMessage("Hello, I'm your data assistant! Need help understanding your artist's data in the dashboard? Ask away!");
