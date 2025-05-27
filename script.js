@@ -62,11 +62,20 @@ function handleSend() {
 
   messageCount++;
 
-  if (messageCount > 5) {
-    addMessage("Sorry, you have reached your credit limit! Subscribe to Wavo Plus if you are seeing this message too often.");
-    input.value = '';
-    return;
-  }
+if (messageCount > 5) {
+  const block = document.createElement('div');
+  block.classList.add('message-block');
+
+  const alert = document.createElement('div');
+  alert.classList.add('message-bot', 'red');
+  alert.innerText = "Sorry, you have reached your credit limit! Subscribe to Wavo Plus if you are seeing this message too often.";
+
+  block.appendChild(alert);
+  messageList.appendChild(block);
+  messageList.scrollTop = messageList.scrollHeight;
+  input.value = '';
+  return;
+}
 
   addMessage(value, true);
   input.value = '';
