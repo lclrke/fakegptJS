@@ -16,7 +16,7 @@ main.cs-main-container {
   width: 360px;
   height: 830px;
   margin: 0 auto;
-  border: 1px solid #ccc;
+  border: 1px solid #ddd; /* was #ccc */
   position: relative;
   overflow: hidden;
 }
@@ -157,7 +157,7 @@ main.cs-main-container {
   flex: 1;
   padding: 8px 15px;
   border-radius: 20px;
-  border: 1px solid #ccc;
+  border: 1px solid #ddd;
   font-size: 14px;
   font-family: inherit;
   outline: none;
