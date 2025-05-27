@@ -32,7 +32,7 @@ function pickUniqueResponse() {
 
 function addMessage(content, isUser = false) {
   const msg = document.createElement('div');
-  msg.className = 'message';
+  msg.classList.add('message');
   msg.innerHTML = isUser
     ? `<span style="color: #666;">You asked: ${content}</span><br>${pickUniqueResponse()}`
     : content;
