@@ -29,7 +29,7 @@ main.cs-main-container {
   padding: 10px;
 }
 
-/* Header styling */
+/* Header */
 .chat-header {
   display: flex;
   align-items: center;
@@ -95,7 +95,46 @@ main.cs-main-container {
   color: #999;
 }
 
-/* Input area */
+/* Message block spacing */
+.message-block {
+  margin-bottom: 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* User bubble */
+.message-user {
+  background-color: #eee;
+  color: #111;
+  padding: 8px 12px;
+  border-radius: 12px;
+  max-width: 80%;
+  font-size: 14px;
+  line-height: 1.4;
+  display: inline-block;
+  white-space: pre-wrap;
+  margin: 4px 0;
+}
+
+/* Bot reply */
+.message-bot {
+  font-size: 14px;
+  color: #333;
+  margin-top: 6px;
+  line-height: 1.6;
+}
+
+/* Red error/limit */
+.message-bot.red {
+  color: #a00;
+  background-color: #fdd;
+  padding: 8px 12px;
+  border-radius: 12px;
+  max-width: 80%;
+  display: inline-block;
+}
+
+/* Input section */
 .cs-message-input {
   display: flex;
   align-items: center;
@@ -111,6 +150,12 @@ main.cs-main-container {
   border: 1px solid #ccc;
   font-size: 14px;
   font-family: inherit;
+  outline: none;
+}
+
+.cs-message-input input:focus {
+  outline: none;
+  border-color: #999;
 }
 
 .cs-message-input button {
@@ -135,7 +180,7 @@ main.cs-main-container {
   padding: 5px 10px;
 }
 
-/* Scrollbar customizations */
+/* Scrollbar custom */
 .cs-message-list::-webkit-scrollbar {
   width: 6px;
 }
@@ -147,29 +192,4 @@ main.cs-main-container {
 .cs-message-list::-webkit-scrollbar-thumb {
   background: #bbb;
   border-radius: 3px;
-}
-.message {
-  margin-bottom: 10px;
-  padding: 6px 0;
-  display: block;
-  border-bottom: 1px solid #eee;
-}
-
-.message-user {
-  background-color: #eaeaea;
-  color: #111;
-  padding: 12px 16px;
-  border-radius: 16px;
-  max-width: 75%;
-  font-size: 14px;
-  line-height: 1.4;
-  display: inline-block;
-  white-space: pre-wrap;
-}
-
-.message-bot {
-  font-size: 14px;
-  color: #333;
-  padding-top: 4px;
-  line-height: 1.6;
 }
