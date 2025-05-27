@@ -148,3 +148,6 @@ main.cs-main-container {
   background: #bbb;
   border-radius: 3px;
 }
+.message {
+  margin-bottom: 10px;
+}
