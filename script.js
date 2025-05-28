@@ -100,4 +100,4 @@ buttons.forEach(btn => {
 
 // Replace placeholder with greeting
 messageList.innerHTML = '';
-addMessage("Hello, I'm your guid to everything Wavo! Have a question about Wavo's core products and services? Ask away!");
+addMessage("Have a question about Wavo's core products and services? Ask away!");
